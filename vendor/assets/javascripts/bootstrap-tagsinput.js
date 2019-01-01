@@ -38,8 +38,8 @@
     this.placeholderText = element.hasAttribute('placeholder') ? this.$element.attr('placeholder') : '';
     this.inputSize = Math.max(1, this.placeholderText.length);
 
-    this.$container = $('<div class="bootstrap-tagsinput"></div>');
-    this.$input = $('<input type="text" placeholder="' + this.placeholderText + '"/>').appendTo(this.$container);
+    this.$container = $('<br><div class="bootstrap-tagsinput"></div>');
+    this.$input = $('<input type="text" class="form-control" placeholder="' + this.placeholderText + '"/>').appendTo(this.$container);
 
     this.$element.after(this.$container);
 
@@ -611,7 +611,7 @@
    * Initialize tagsinput behaviour on inputs and selects which have
    * data-role=tagsinput
    */
-  $(function() {
-    $("input[data-role=tagsinput], select[multiple][data-role=tagsinput]").tagsinput();
-  });
+  // $(function() {
+  //   $("input[data-role=tagsinput], select[multiple][data-role=tagsinput]").tagsinput();
+  // });
 })(window.jQuery);
